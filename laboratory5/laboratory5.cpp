@@ -63,7 +63,7 @@ void work() {
 
     auto end = chrono::steady_clock::now();
     double time_sec =
-        chrono::duration_cast<chrono::seconds>(end - start).count();
+        chrono::duration<double>(end - start).count();
 
     osyncstream(cout) << "Time: " << time_sec << " seconds\n";
     osyncstream(cout) << "Work is done!\n";
